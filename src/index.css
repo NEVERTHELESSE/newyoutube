@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bgcolor: white;
+    --fgcolor: black;
+    --primarycolor: #e7e7e7;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bgcolor: black;
+    --fgcolor: white;
+    --primarycolor: gray;
+  }
+}
+
+.light {
+  --bgcolor: white;
+  --fgcolor: black;
+  --primarycolor: rgb(220, 220, 220);
+}
+
+.dark {
+  --bgcolor: rgb(18, 18, 18);
+  --fgcolor: white;
+  --primarycolor: rgb(89, 89, 89);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+  transition: all 1s;
+  background: var(--bgcolor);
+  color: var(--fgcolor);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+#account {
+  box-shadow: 0px 0 15px rgba(120, 120, 120, 0.655),
+    0px 0 10px rgba(120, 120, 120, 0.655);
+}
